@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #7a0202, #ffffff); /* Cool gradient background */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.year-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.year-card:hover {
+  transform: scale(1.05);
+}
+
+.year-image {
+  width: 30%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.year-info {
+  width: 60%;
+  text-align: center;
+}
+
+.year-info h1 {
+  font-size: 2rem;
+  color: #4b4a4a;
+  margin-bottom: 10px;
+}
+
+.year-info h2 {
+  font-size: 1.5rem;
+  color: #7a0202;
+  margin-bottom: 15px;
+}
+
+.fortune {
+  font-size: 1rem;
+  color: #4b4a4a;
+}
+
+@media (max-width: 768px) {
+  .year-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .year-image {
+    width: 80%;
+    margin-bottom: 15px;
+  }
+
+  .year-info {
+    width: 100%;
+  }
+}
