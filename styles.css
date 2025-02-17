@@ -6,7 +6,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #7a0202, #ffffff); /* Cool gradient background */
+  background: linear-gradient(to bottom, #7a0202, #ffffff);
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -24,9 +24,8 @@ body {
 
 .year-card {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
@@ -38,25 +37,35 @@ body {
   transform: scale(1.05);
 }
 
+/* IMAGE - Aligns to the left */
 .year-image {
-  width: 30%;
+  width: 25%;
   height: auto;
   object-fit: cover;
   border-radius: 8px;
 }
 
-.year-info {
-  width: 60%;
+/* TEXT CONTAINER */
+.text-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 20px;
+}
+
+/* FORTUNE - Centers in the middle */
+.fortune-container {
+  width: 40%;
   text-align: center;
 }
 
-.year-info h1 {
+.fortune-container h1 {
   font-size: 2rem;
   color: #4b4a4a;
   margin-bottom: 10px;
 }
 
-.year-info h2 {
+.fortune-container h2 {
   font-size: 1.5rem;
   color: #7a0202;
   margin-bottom: 15px;
@@ -67,6 +76,25 @@ body {
   color: #4b4a4a;
 }
 
+/* REFLECTION - Aligns to the right and centers the title and text */
+.reflection-container {
+  width: 30%;
+  text-align: center;
+}
+
+.reflection-container h3 {
+  font-size: 1.5rem;
+  color: #7a0202;
+  margin-bottom: 10px;
+}
+
+.reflection {
+  font-size: 1rem;
+  color: #333;
+  font-style: italic;
+}
+
+/* RESPONSIVE - Adjust for smaller screens */
 @media (max-width: 768px) {
   .year-card {
     flex-direction: column;
@@ -78,7 +106,17 @@ body {
     margin-bottom: 15px;
   }
 
-  .year-info {
+  .text-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fortune-container, .reflection-container {
     width: 100%;
+    text-align: center;
+  }
+
+  .reflection {
+    margin-top: 10px;
   }
 }
